@@ -39,3 +39,8 @@ Sales forecasting, financial trends, demand estimation, resource planning
 
 ## 🔮 Future Scope
 Real-time forecasting, multivariate time series, dashboard deployment
+
+## 📄 Project Documentation
+Detailed project documentation is available here:
+
+➡️ [Download Project Documentation](docs/Time_Series_ARIMA_GRU_Documentation.docx)
