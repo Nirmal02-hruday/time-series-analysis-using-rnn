@@ -1,0 +1,22 @@
+digraph "ARIMA-GRU System Architecture" {
+	rankdir=TB size=10
+	DI [label="Data Ingestion" shape=parallelogram]
+	PP [label=Preprocessing shape=parallelogram]
+	FE [label="Feature Engineering" shape=parallelogram]
+	ARIMA [label="ARIMA Model" shape=ellipse]
+	GRU [label="GRU Model" shape=ellipse]
+	IP [label="Integration & Prediction" shape=ellipse]
+	EV [label="Evaluation & Optimization" shape=parallelogram]
+	DP [label=Deployment shape=parallelogram]
+	MF [label="Monitoring & Feedback" shape=parallelogram]
+	DI -> PP [label="Raw Data"]
+	PP -> FE [label="Cleaned Data"]
+	FE -> ARIMA [label=Features]
+	FE -> GRU [label=Features]
+	ARIMA -> IP [label="Linear Trend"]
+	GRU -> IP [label="Complex Patterns"]
+	IP -> EV [label=Predictions]
+	EV -> DP [label="Optimized Model"]
+	DP -> MF [label="Live Monitoring"]
+	MF -> PP [label="Retraining Trigger"]
+}
